@@ -2,38 +2,33 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import {Demo} from './components/Demo'
-import { Name1 } from './components/Name1'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const name = "John";
+  let x = 90;
+  let y = 51;
+  function name1 ()
+    {
+      return "My name is Vengeance";
+    }
+    function sum (a,b,op)
+    {
+      if(op=='+'){
+        return (a+b);
 
+      }
+      else if(op=='-'){
+        return (a-b);
+      }
+    }
   return (
     <div>
-      {/* alert("sum") */}
-    <h1>My Name is VENGEANCE!!!</h1>
-    <h1>I am from BGMIPUR.</h1>
-    <Employee></Employee>
-    <Demo></Demo>
-    <Name></Name>
-    <Name1></Name1>
-    {sum()}
-      </div>
-  )
-}
-function Employee(){
-  return(
-    <h1>Rudra Soni</h1>
-  )
-}
-function sum(){
-  return(
-    (10+10)
-  )
-}
-function Name(){
-  return(
-    <h1>Ye lo</h1>
+      <h1>User variable with jsx</h1>
+      <h2>My name is {name}</h2>
+      <h3>The value of variable{x+y}</h3>
+      <h4>{name1()}</h4>
+      <h5>{sum(20,7,'+')}</h5>
+    </div>
   )
 }
 export default App
