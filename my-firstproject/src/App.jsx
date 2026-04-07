@@ -4,30 +4,26 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const name = "John";
-  let x = 90;
-  let y = 51;
-  function name1 ()
-    {
-      return "My name is Vengeance";
-    }
-    function sum (a,b,op)
-    {
-      if(op=='+'){
-        return (a+b);
-
-      }
-      else if(op=='-'){
-        return (a-b);
-      }
-    }
+  function button(){
+    alter ("You clicked on Button")
+  }
+  const fruit = ()=>{
+    alter ("Example of arrow function")
+  }
+  let data = "Demo"
+  function updata(){
+    data = "Example"
+    alter (data);
+  }
   return (
     <div>
-      <h1>User variable with jsx</h1>
-      <h2>My name is {name}</h2>
-      <h3>The value of variable{x+y}</h3>
-      <h4>{name1()}</h4>
-      <h5>{sum(20,7,'+')}</h5>
+      <h1>Example of Arrow function</h1>
+      <button onClick={button}>Click on the Button</button>
+      <button onClick={()=>fruit("First Parameter")}>Fruit Button</button>
+      <button onClick={()=>fruit("You clicked on Apple")}>Apple</button>
+      <button onClick={()=>fruit("You clicked on Banana")}>Banana</button>
+      <h2>{data}</h2>
+      <button onClick={updata}>Click to change value</button>
     </div>
   )
 }
